@@ -1,0 +1,27 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "name": "Localhost",
+            "database": "db.sqlite"
+        }
+    ],
+    "editor.tabSize": 2,
+    "editor.formatOnSave": true,
+    "dbcode.connections": [
+        {
+            "connectionId": "hQ8otdLTNC2H36NH5XKod",
+            "name": "Local",
+            "driver": "sqlite",
+            "connectionType": "socket",
+            "socket": "app/db.sqlite",
+            "readOnly": false,
+            "driverOptions": {
+                "extensions": []
+            },
+            "idleTimeout": 0
+        }
+    ],
+    "sqltools.useNodeRuntime": true
+}
