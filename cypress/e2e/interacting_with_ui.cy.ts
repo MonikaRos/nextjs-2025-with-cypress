@@ -94,3 +94,4 @@ describe('Album Catalog - Interactions', () => {
     cy.get('[data-cy="album-card"]').should('be.visible');
   });
 });
+
