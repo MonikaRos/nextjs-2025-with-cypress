@@ -9,6 +9,7 @@
     ],
     "editor.tabSize": 2,
     "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
     "dbcode.connections": [
         {
             "connectionId": "hQ8otdLTNC2H36NH5XKod",

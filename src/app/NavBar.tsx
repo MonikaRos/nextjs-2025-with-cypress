@@ -6,39 +6,34 @@ import { useState } from "react";
 export function NavBar() {
   const [searchInput, setSearchInput] = useState("");
 
-  console.log("NavBar render searchInput:", searchInput);
-
+  // pripravíme query objekt len ak je searchInput neprázdny
   const searchLinkQuery = searchInput !== "" ? { q: searchInput } : {};
 
   return (
-    <div className="navbar bg-base-100 shadow-sm" data-cy="navbar">
+    <div className="navbar bg-base-100 shadow-sm p-4">
+      {/* Logo / domov */}
       <div className="flex-1">
-        <Link 
-          href="/" 
-          className="btn btn-ghost text-xl"
-          data-cy="title"
-        >
+        <Link href="/" className="btn btn-ghost text-xl">
           Spotify
         </Link>
       </div>
-      <div className="flex gap-2">
+
+      {/* Vyhľadávanie */}
+      <div className="flex gap-2 items-center">
         <input
           type="text"
           placeholder="Search"
           className="input input-bordered w-24 md:w-auto"
-          data-cy="search-input"
           value={searchInput}
-          onChange={(e) => {
-            setSearchInput(e.target.value);
-          }}
+          onChange={(e) => setSearchInput(e.target.value)}
         />
+
         <Link
           href={{
             pathname: "/search",
             query: searchLinkQuery,
           }}
           className="btn btn-ghost text-xl"
-          data-cy="search-button"
         >
           Search
         </Link>
